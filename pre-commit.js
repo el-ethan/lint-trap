@@ -13,9 +13,8 @@ async function main() {
     if (results.exitCode === 1 && results.output) {
         console.log(results.output);
         console.log(`You have some linting errors.
-Please see the output above and fix the errors
-before commiting, our ignore errors and commit
-using \`git commit --no-verify\``);
+Please see the output above and fix the errors before commiting,
+or ignore errors and commit using \`git commit --no-verify\`.`);
     }
     process.exit(results.exitCode);
 }
