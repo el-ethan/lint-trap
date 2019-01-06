@@ -8,6 +8,18 @@ const filesToOmitFromLinting = [
     'my-file-to-ignore.js'
 ];
 
+async function main() {
+    const results = await lintFiles();
+    if (results.exitCode === 1 && results.output) {
+        console.log(results.output);
+        console.log(`You have some linting errors.
+Please see the output above and fix the errors
+before commiting, our ignore errors and commit
+using \`git commit --no-verify\``);
+    }
+    process.exit(results.exitCode);
+}
+
 async function getFilesToLint() {
     const filesToLint = await exec('git diff HEAD --name-only').then(({stdout}) => {
         const files = stdout.split('\n');
@@ -28,15 +40,6 @@ async function lintFiles() {
         .catch(({stdout}) => {
             return {exitCode: 1, output:stdout};
         });
-}
-
-async function main() {
-    const results = await lintFiles();
-    if (results.exitCode === 1 && results.output) {
-        console.log(results.output);
-        console.log('You have some linting errors. Please see the output above and fix the errors before commiting, our ignore errors and commit using `git commit --no-verify`');
-    }
-    process.exit(results.exitCode);
 }
 
 main();
