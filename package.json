@@ -1,8 +1,8 @@
 {
     "name": "pre-commit-lint",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Pre-commit hooks for linting changed js files",
-    "main": "pre-commit.js",
+    "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
