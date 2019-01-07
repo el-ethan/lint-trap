@@ -1,7 +1,7 @@
 {
     "name": "lint-trap",
     "version": "1.0.0",
-    "description": "",
+    "description": "Pre-commit hooks for linting changed js files",
     "main": "pre-commit.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,7 +9,11 @@
     "bin": {
         "lint-trap": "./index.js"
     },
-    "author": "",
+    "repository": {
+        "type" : "git",
+        "url" : "https://github.com/el-ethan/lint-trap"
+    },
+    "author": "el-ethan",
     "license": "ISC",
     "dependencies": {
         "child-process-promise": "^2.2.1",
