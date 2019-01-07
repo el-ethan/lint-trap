@@ -1,6 +1,6 @@
 {
     "name": "pre-commit-lint",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Pre-commit hooks for linting changed js files",
     "main": "pre-commit.js",
     "scripts": {
