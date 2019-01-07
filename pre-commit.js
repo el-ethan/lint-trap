@@ -41,4 +41,4 @@ async function lintFiles() {
         });
 }
 
-main();
+module.exports = main;
