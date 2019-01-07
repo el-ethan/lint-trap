@@ -5,7 +5,7 @@ const program = require('commander');
 const lintFiles = require('./pre-commit.js');
 
 const preCommitFilePath = './.git/hooks/pre-commit';
-const preCommitFileContent = '#!/bin/sh\n\nlint-trap --check\n\nexit $?\n';
+const preCommitFileContent = '#!/bin/sh\n\npc-lint --check\n\nexit $?\n';
 const gitPath = './.git/';
 
 

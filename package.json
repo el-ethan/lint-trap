@@ -1,5 +1,5 @@
 {
-    "name": "lint-trap",
+    "name": "pre-commit-lint",
     "version": "1.0.0",
     "description": "Pre-commit hooks for linting changed js files",
     "main": "pre-commit.js",
@@ -7,11 +7,11 @@
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "bin": {
-        "lint-trap": "./index.js"
+        "pc-lint": "./index.js"
     },
     "repository": {
         "type" : "git",
-        "url" : "https://github.com/el-ethan/lint-trap"
+        "url" : "https://github.com/el-ethan/pre-commit-lint"
     },
     "author": "el-ethan",
     "license": "ISC",
