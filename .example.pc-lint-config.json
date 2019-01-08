@@ -1,0 +1,4 @@
+{
+    "filesToIgnore": ["foo.js", "bar.js"], 
+    "linter": "jshint"
+}
