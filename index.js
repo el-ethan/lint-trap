@@ -27,10 +27,29 @@ function main() {
         }
     } else if (program.check) {
         lintFiles();
+    } else if (program.remove) {
+        removePreCommit();
     }
 }
 main();
 
+
+function removePreCommit() {
+    if (!hasPreCommitHook()) {
+        console.log('You have not added a pre-commit file yet. Nothing to remove!');
+    }
+
+    const fileContents = fs.readFileSync(preCommitFilePath, 'utf8');
+
+    if (fileContents === preCommitFileContent) {
+        fs.unlinkSync(preCommitFilePath);
+        console.log(`File: ${preCommitFilePath} removed.`);
+    } else {
+        console.log(`It looks like you have a pre-commit file
+that was created/modified outside of pc-lint.
+Just to be safe, we will not remove this file.`);
+    }
+}
 
 function isGitRepo() {
     try {
