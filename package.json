@@ -2,6 +2,9 @@
     "name": "pre-commit-lint",
     "version": "1.3.0",
     "description": "Pre-commit hooks for linting changed js files",
+    "engines": {
+        "node": ">=8"
+    },
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
